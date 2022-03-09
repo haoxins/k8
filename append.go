@@ -24,6 +24,24 @@ func AppendVolumeMounts(volumeMounts []corev1.VolumeMount, newVolumeMounts ...co
 	return volumeMounts
 }
 
+func AppendVolumes(volumes []corev1.Volume, newVolumes ...corev1.Volume) []corev1.Volume {
+	for _, mounts := range newVolumes {
+		var conflict = false
+		for _, mount := range volumes {
+			if mounts.Name == mount.Name {
+				conflict = true
+				break
+			}
+		}
+		if !conflict {
+			fmt.Println("Skipping append because of conflict")
+			volumes = append(volumes, mounts)
+		}
+	}
+
+	return volumes
+}
+
 func AppendEnvVars(envVars []corev1.EnvVar, newEnvVars ...corev1.EnvVar) []corev1.EnvVar {
 	for _, envVar := range newEnvVars {
 		var conflict = false
