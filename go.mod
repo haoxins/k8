@@ -4,8 +4,8 @@ go 1.18
 
 require (
 	github.com/banzaicloud/k8s-objectmatcher v1.8.0
-	github.com/onsi/ginkgo/v2 v2.2.0
-	github.com/onsi/gomega v1.21.1
+	github.com/onsi/ginkgo/v2 v2.3.0
+	github.com/onsi/gomega v1.22.1
 	k8s.io/api v0.25.3
 	k8s.io/apimachinery v0.25.3
 )
