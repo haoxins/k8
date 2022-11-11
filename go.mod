@@ -6,8 +6,8 @@ require (
 	github.com/banzaicloud/k8s-objectmatcher v1.8.0
 	github.com/onsi/ginkgo/v2 v2.5.0
 	github.com/onsi/gomega v1.24.0
-	k8s.io/api v0.25.3
-	k8s.io/apimachinery v0.25.3
+	k8s.io/api v0.25.4
+	k8s.io/apimachinery v0.25.4
 )
 
 require (
